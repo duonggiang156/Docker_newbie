@@ -24,6 +24,7 @@ if __name__ == '__main__':
 
 ```bash
 fastapi==0.111.0
+uvicorn[standard]==0.24.0
 ```
  
 ## Bước 4: Tạo File Dockerfile
