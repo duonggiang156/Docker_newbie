@@ -4,16 +4,17 @@ FROM python:3.11.9-slim
 
 # Đặt thư mục làm việc bên trong container
 # Từ đây mặc định mọi thao tác sẽ là thao tác trong thư mục này
-WORKDIR /app
+WORKDIR /app 
 
 # Copy các file cần thiết vào container
+# COPY . .              => COPY TẤT CẢ ĐỐNG CODE VÀO TRONG THƯ MỤC
 COPY requirements.txt requirements.txt
 COPY app.py app.py
 
 # Cài đặt các thư viện cần thiết
 RUN pip install -r requirements.txt
 
-# Mở cổng 8000
+# Mở cổng 8000 (OPTION)
 EXPOSE 8000
 
 # Chạy ứng dụng
